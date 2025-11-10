@@ -4,7 +4,6 @@ import "./globals.css";
 import "./globals-pattern.css";
 import PatternWrapper from "./pattern-wrapper";
 import { portfolioConfig } from "@/site.config";
-import PostHogProvider from "./posthog-wrapper";
 
 export const metadata: Metadata = {
   generator: "Next.js",
@@ -56,11 +55,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <PostHogProvider>
         <body>
           <PatternWrapper>{children}</PatternWrapper>
         </body>
-      </PostHogProvider>
     </html>
   );
 }

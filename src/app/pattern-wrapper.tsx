@@ -4,9 +4,6 @@ import localFont from "next/font/local";
 import dynamic from "next/dynamic";
 import { useEffect } from "react";
 
-const PostHogView = dynamic(() => import("./posthog-view"), {
-  ssr: false,
-});
 
 const satoshi = localFont({
   src: [
@@ -76,7 +73,6 @@ export default function PatternWrapper({
 
   return (
     <>
-      <PostHogView />
       {children}
     </>
   );

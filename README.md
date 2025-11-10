@@ -65,29 +65,6 @@ This helps your portfolio look great when shared online.
 
 Your portfolio should now be live at `https://your-project.vercel.app` (or your custom domain).  
 
----
-
-## 📊 (Optional) Analytics with PostHog  
-
-You can add **PostHog** analytics to track page views and interactions.  
-
-### Steps
-
-1. [Sign up at PostHog](https://posthog.com).  
-2. Create a **new project**.  
-3. Select **Next.js** but **skip installation** (since it’s already set up).  
-4. Copy your **Project API Key** and **Host URL** into `.env`:  
-
-```env
-NEXT_PUBLIC_POSTHOG_KEY=your_key_here
-NEXT_PUBLIC_POSTHOG_HOST=your_host_here
-```
-
-5. Go to your **PostHog Project Settings** → **Authorized Domains** and add:  
-   - Your Vercel deployment URL (e.g., `https://your-site.vercel.app`)  
-   - Or your custom domain (e.g., `https://yourdomain.com`)  
-
-6. Redeploy your site. 🎯  
 
 ---
 

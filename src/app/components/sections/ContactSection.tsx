@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import posthog from "posthog-js";
 import { useGSAP } from "@gsap/react";
 import { SiGmail, SiLinkedin, SiGithub, SiInstagram } from "react-icons/si";
 
@@ -60,14 +59,6 @@ export default function ContactSection() {
       );
   });
 
-  const logContactClick = (contact: string) => {
-    return () => {
-      posthog.capture("click_contact_link", {
-        contact,
-      });
-    };
-  };
-
   return (
     <>
       <SectionIntro sectionNumber="04" sectionTitle="Contact" />
@@ -98,7 +89,7 @@ export default function ContactSection() {
                 <a
                   className="contact-text link font-medium xl:text-3xl"
                   href={`mailto:${portfolioConfig.email}`}
-                  onClick={logContactClick("email")}
+                 
                 >
                   {portfolioConfig.email}
                 </a>
@@ -110,7 +101,7 @@ export default function ContactSection() {
                   href={`https://linkedin.com/in/${portfolioConfig.linkedInUsername}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={logContactClick("linkedin")}
+                 
                 >
                   linkedin.com/in/{portfolioConfig.linkedInUsername}
                 </a>
@@ -122,7 +113,7 @@ export default function ContactSection() {
                   href={`https://github.com/${portfolioConfig.githubUsername}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={logContactClick("github")}
+                  
                 >
                   github.com/{portfolioConfig.githubUsername}
                 </a>
@@ -134,7 +125,7 @@ export default function ContactSection() {
                   href={`https://instagram.com/${portfolioConfig.instagramUsername}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={logContactClick("instagram")}
+                 
                 >
                   instagram.com/{portfolioConfig.instagramUsername}
                 </a>

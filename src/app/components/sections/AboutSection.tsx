@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import posthog from "posthog-js";
 import { FaExternalLinkAlt } from "react-icons/fa";
 import { Mogra } from "next/font/google";
 
@@ -67,9 +66,6 @@ export default function AboutSection() {
           target="_blank"
           rel="noopener noreferrer"
           className="flex px-4 py-3 font-medium text-white text-xl bg-black transition-colors hover:bg-black/80 duration-200 self-start gap-3 rounded-md items-center"
-          onClick={() => {
-            posthog.capture("view_resume");
-          }}
         >
           Resume
           <FaExternalLinkAlt />

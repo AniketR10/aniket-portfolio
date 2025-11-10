@@ -1,5 +1,4 @@
 import Image from "next/image";
-import posthog from "posthog-js";
 import { FaGithub } from "react-icons/fa6";
 
 import Tag from "./Tag";
@@ -53,11 +52,7 @@ export default function ProjectCard({
                 target="_blank"
                 rel="noopener noreferrer"
                 className="link"
-                onClick={() => {
-                  posthog.capture("view_project", {
-                    project: title,
-                  });
-                }}
+                
               >
                 development
               </a>
@@ -72,11 +67,7 @@ export default function ProjectCard({
                   href={projectGithubLink}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => {
-                    posthog.capture("view_project", {
-                      project: title,
-                    });
-                  }}
+                  
                 >
                   <span
                     aria-label={`open ${projectGithubLink}`}
